@@ -366,6 +366,64 @@ p {
   margin: 35px 0 0 0;
 }
 
+.footer__wrapp-form {
+  background: var(--bg-second-color);
+}
+.footer__wrapper-form {
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px 5px;
+}
+@media (max-width: 991px) {
+  .footer__wrapper-form {
+    width: auto;
+  }
+}
+.footer__wrapper-form h2 {
+  font-family: var(--openSans-font);
+  font-weight: var(--bold);
+  font-size: 22px;
+  color: var(--white-text-color);
+}
+.footer__form {
+  display: flex;
+}
+.footer__form input {
+  font-family: var(--openSans-font);
+  font-weight: var(--regular);
+  font-size: 14px;
+  color: var(--brown-text-color);
+  padding: 10px 60px 10px 16px;
+  outline: none;
+}
+.footer__form input::-moz-placeholder {
+  font-family: var(--openSans-font);
+  font-weight: var(--regular);
+  font-size: 14px;
+  color: var(--brown-text-color);
+}
+.footer__form input::placeholder {
+  font-family: var(--openSans-font);
+  font-weight: var(--regular);
+  font-size: 14px;
+  color: var(--brown-text-color);
+}
+.footer__form button {
+  font-family: var(--openSans-font);
+  font-weight: var(--bold);
+  font-size: 13px;
+  color: var(--white-text-color);
+  background: var(--offical-color);
+  border: 0;
+  outline: none;
+  padding: 0 50px;
+}
+
 @media (max-width: 479px) {
   .header {
     min-height: auto;

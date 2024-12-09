@@ -340,6 +340,52 @@ p{
     }
 }
 
+.footer{
+    &__wrapp-form{
+        background: var(--bg-second-color);
+    }
+    &__wrapper-form{
+        @include content-width();
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 30px 5px;
+        h2{
+            font-family: var(--openSans-font);
+            font-weight: var(--bold);
+            font-size: 22px;
+            color: var(--white-text-color);
+        }
+    }
+    &__form{
+        display: flex;
+        input{
+            font-family: var(--openSans-font);
+            font-weight: var(--regular);
+            font-size: 14px;
+            color: var(--brown-text-color);
+            padding: 10px 60px 10px 16px; 
+            outline: none;
+        }
+        input::placeholder{
+            font-family: var(--openSans-font);
+            font-weight: var(--regular);
+            font-size: 14px;
+            color: var(--brown-text-color);
+        }
+        button{
+            font-family: var(--openSans-font);
+            font-weight: var(--bold);
+            font-size: 13px;
+            color: var(--white-text-color);
+            background: var(--offical-color);
+            border: 0;
+            outline: none;
+            padding: 0 50px;
+        }
+    }
+}
+
 @media (max-width: 479px) {
     .header{
         min-height: auto;
