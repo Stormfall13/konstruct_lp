@@ -384,6 +384,85 @@ p{
             padding: 0 50px;
         }
     }
+    &__wrapp-all{
+        background: var(--bg-first-color);
+    }
+    &__wrapper-all{
+        @include content-width(); 
+        display: flex;
+    }
+    &__wrapper-company{
+        max-width: 250px;
+        p{
+            font-family: var(--openSans-font);
+            font-weight: var(--regular);
+            font-size: 11px;
+            color: var(--white-text-color);
+        }
+        .logo{
+            max-width: 101px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__menu{
+        max-width: 300px;
+        width: 100%; 
+        .menu__wrapp{
+            display: flex;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin: 0 34px 0 0;
+        }
+        p{
+            font-family: var(--openSans-font);
+            font-weight: var(--regular);
+            font-size: 11px;
+            color: var(--white-text-color);
+        }
+        a{
+            font-family: var(--openSans-font);
+            font-weight: var(--semi-bold);
+            font-size: 11px;
+            color: var(--white-text-color); 
+            display: inline-block;
+            margin: 10px 0;
+        }
+    }
+    &__contact{
+        font-family: var(--openSans-font);
+        font-weight: var(--regular);
+        font-size: 11px;
+        color: var(--white-text-color);
+        a{
+            font-family: var(--openSans-font);
+            font-weight: var(--regular);
+            font-size: 11px;
+            color: var(--white-text-color);
+        }
+        a:first-child{
+            margin: 10px 0;
+        }
+    }
+    &__social{
+        display: flex;
+        flex-wrap: wrap;
+        a{
+            width: 13px;
+            height: 13px;
+            display: inline-block;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
 }
 
 @media (max-width: 479px) {
