@@ -151,6 +151,7 @@ p{
         position: relative;
         display: flex;
         justify-content: center;
+        margin: revert;
     }
     &__title::before{
         content: '';
@@ -359,6 +360,7 @@ p{
     }
     &__form{
         display: flex;
+        flex-wrap: wrap;
         input{
             font-family: var(--openSans-font);
             font-weight: var(--regular);
@@ -390,6 +392,7 @@ p{
     &__wrapper-all{
         @include content-width(); 
         display: flex;
+        justify-content: space-around;
     }
     &__wrapper-company{
         max-width: 250px;
@@ -439,19 +442,25 @@ p{
         font-weight: var(--regular);
         font-size: 11px;
         color: var(--white-text-color);
+        display: flex;
+        flex-direction: column;
+        p{
+            margin: 0 0 15px 0; 
+        }
         a{
             font-family: var(--openSans-font);
             font-weight: var(--regular);
             font-size: 11px;
             color: var(--white-text-color);
-        }
-        a:first-child{
-            margin: 10px 0;
+            margin: 0 0 15px 0;
         }
     }
     &__social{
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 90px;
+        width: 100%;
         a{
             width: 13px;
             height: 13px;
@@ -461,6 +470,48 @@ p{
                 height: 100%;
                 object-fit: contain;
             }
+        }
+    }
+    &__copyright{
+        background: var(--bg-second-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 5px;
+        p{
+            font-family: var(--openSans-font);
+            font-weight: var(--regular);
+            font-size: 11px;
+            color: var(--white-text-color);   
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .footer{
+        &__menu{
+            display: none;
+        }
+        &__wrapper-form{
+            flex-wrap: wrap;
+            
+        }
+        &__form{
+            justify-content: center;
+            input{
+                padding: 10px 0px 10px 16px;
+            }
+            button{
+                padding: 13px 30px;
+            }
+        }
+        &__wrapper-all{
+            flex-direction: column;
+        }
+    }
+    .capab{
+        &__wrapp{
+            padding: 0 5px;
         }
     }
 }
@@ -488,10 +539,36 @@ p{
         }
         &__wrapp-card{
             width: auto;
-            justify-content: center;
+            margin: 13px 0 0 0;
             .capab__wrapper-card{
-                margin: 13px 0;
+                margin: 2px;
+                max-width: 170px;
+                min-height: 237px;
+                padding: 13px;
+                .card__img{
+                    max-width: 50px;
+                }
+                h2{
+                    font-size: 11px;
+                }
+                p{
+                    z-index: 11px;
+                    line-height: 14px;
+                }
             }
+        }
+    }
+    .bgbanner{
+        min-height: 300px;
+    }
+    .footer{
+        &__wrapper-form{
+            h2{
+                margin: revert;
+            }
+        }
+        &__wrapper-form{
+            justify-content: flex-start; 
         }
     }
 }

@@ -160,6 +160,7 @@ p {
   position: relative;
   display: flex;
   justify-content: center;
+  margin: revert;
 }
 .ourStory__title::before {
   content: "";
@@ -392,6 +393,7 @@ p {
 }
 .footer__form {
   display: flex;
+  flex-wrap: wrap;
 }
 .footer__form input {
   font-family: var(--openSans-font);
@@ -432,6 +434,7 @@ p {
   margin: 0 auto;
   padding: 0 5px;
   display: flex;
+  justify-content: space-around;
 }
 @media (max-width: 991px) {
   .footer__wrapper-all {
@@ -487,19 +490,25 @@ p {
   font-weight: var(--regular);
   font-size: 11px;
   color: var(--white-text-color);
+  display: flex;
+  flex-direction: column;
+}
+.footer__contact p {
+  margin: 0 0 15px 0;
 }
 .footer__contact a {
   font-family: var(--openSans-font);
   font-weight: var(--regular);
   font-size: 11px;
   color: var(--white-text-color);
-}
-.footer__contact a:first-child {
-  margin: 10px 0;
+  margin: 0 0 15px 0;
 }
 .footer__social {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 90px;
+  width: 100%;
 }
 .footer__social a {
   width: 13px;
@@ -512,7 +521,43 @@ p {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.footer__copyright {
+  background: var(--bg-second-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 5px;
+}
+.footer__copyright p {
+  font-family: var(--openSans-font);
+  font-weight: var(--regular);
+  font-size: 11px;
+  color: var(--white-text-color);
+}
 
+@media (max-width: 991px) {
+  .footer__menu {
+    display: none;
+  }
+  .footer__wrapper-form {
+    flex-wrap: wrap;
+  }
+  .footer__form {
+    justify-content: center;
+  }
+  .footer__form input {
+    padding: 10px 0px 10px 16px;
+  }
+  .footer__form button {
+    padding: 13px 30px;
+  }
+  .footer__wrapper-all {
+    flex-direction: column;
+  }
+  .capab__wrapp {
+    padding: 0 5px;
+  }
+}
 @media (max-width: 479px) {
   .header {
     min-height: auto;
@@ -533,9 +578,31 @@ p {
   }
   .capab__wrapp-card {
     width: auto;
-    justify-content: center;
+    margin: 13px 0 0 0;
   }
   .capab__wrapp-card .capab__wrapper-card {
-    margin: 13px 0;
+    margin: 2px;
+    max-width: 170px;
+    min-height: 237px;
+    padding: 13px;
+  }
+  .capab__wrapp-card .capab__wrapper-card .card__img {
+    max-width: 50px;
+  }
+  .capab__wrapp-card .capab__wrapper-card h2 {
+    font-size: 11px;
+  }
+  .capab__wrapp-card .capab__wrapper-card p {
+    z-index: 11px;
+    line-height: 14px;
+  }
+  .bgbanner {
+    min-height: 300px;
+  }
+  .footer__wrapper-form h2 {
+    margin: revert;
+  }
+  .footer__wrapper-form {
+    justify-content: flex-start;
   }
 }/*# sourceMappingURL=style.css.map */
