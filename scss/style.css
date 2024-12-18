@@ -549,6 +549,7 @@ p {
   }
   .footer__wrapper-form {
     flex-wrap: wrap;
+    padding: 30px 10px;
   }
   .footer__form {
     justify-content: center;
@@ -561,6 +562,7 @@ p {
   }
   .footer__wrapper-all {
     flex-direction: column;
+    padding: 0 10px;
   }
   .capab__wrapp {
     padding: 0 5px;

@@ -501,6 +501,7 @@ p{
         }
         &__wrapper-form{
             flex-wrap: wrap;
+            padding: 30px 10px;
             
         }
         &__form{
@@ -514,6 +515,7 @@ p{
         }
         &__wrapper-all{
             flex-direction: column;
+            padding: 0 10px;
         }
     }
     .capab{
