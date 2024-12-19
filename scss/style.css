@@ -325,6 +325,7 @@ p {
   color: var(--white-text-color);
   background: var(--offical-color);
   padding: 13px 28px;
+  transition: 0.6s;
 }
 .capab__wrapp-card {
   display: flex;
@@ -411,6 +412,7 @@ p {
   padding: 12px 29px;
   display: inline-block;
   margin: 35px 0 0 0;
+  transition: 0.6s;
 }
 
 .footer__wrapp-form {
@@ -470,6 +472,7 @@ p {
   border: 0;
   outline: none;
   padding: 0 50px;
+  transition: 0.6s;
 }
 .footer__wrapp-all {
   background: var(--bg-first-color);

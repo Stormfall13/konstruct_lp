@@ -3,8 +3,6 @@ const closeMenuBurger = document.querySelector('.close__menu')
 const linkMenu = document.querySelectorAll('.link__menu')
 const menu = document.querySelector('.underheader__menu')
 
-console.log(linkMenu);
-
 
 openBurger.addEventListener('click', () => {
     menu.style.transform = 'translate(0vh)';
@@ -44,3 +42,14 @@ const animateOnScroll = (entries, observer) => {
   // Находим все элементы, которые нужно анимировать
   const elementsToAnimate = document.querySelectorAll('.header, .ourStory, .capab, .bgbanner');
   elementsToAnimate.forEach(element => observer.observe(element));
+
+
+const buttonHoverAminAll = document.querySelectorAll('.capab__wrapp > a, .bgbanner__wrapp > a, .footer__form-btn')
+for(let buttonAll of buttonHoverAminAll){
+  buttonAll.addEventListener('mouseout', () => {
+    buttonAll.style.boxShadow = ''
+  })
+  buttonAll.addEventListener('mouseover', () => {
+    buttonAll.style.boxShadow = '4px 4px 2px 2px #afe8ff'
+  })
+}
