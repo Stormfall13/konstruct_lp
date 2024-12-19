@@ -23,3 +23,24 @@ for(let linksMenu of linkMenu){
 }
 
 
+// Функция-обработчик появления элемента
+const animateOnScroll = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Добавляем класс с анимацией
+        entry.target.classList.add('animate');
+        
+        // Если анимация однократная, прекращаем наблюдение
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+  
+  // Создаем наблюдатель
+  const observer = new IntersectionObserver(animateOnScroll, {
+    threshold: 0.5 // Срабатывает, когда элемент виден на 50%
+  });
+  
+  // Находим все элементы, которые нужно анимировать
+  const elementsToAnimate = document.querySelectorAll('.header, .ourStory, .capab, .bgbanner');
+  elementsToAnimate.forEach(element => observer.observe(element));
