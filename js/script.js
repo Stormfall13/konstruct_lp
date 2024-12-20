@@ -44,12 +44,19 @@ const animateOnScroll = (entries, observer) => {
   elementsToAnimate.forEach(element => observer.observe(element));
 
 
-const buttonHoverAminAll = document.querySelectorAll('.capab__wrapp > a, .bgbanner__wrapp > a, .footer__form-btn')
-for(let buttonAll of buttonHoverAminAll){
-  buttonAll.addEventListener('mouseout', () => {
-    buttonAll.style.boxShadow = ''
-  })
-  buttonAll.addEventListener('mouseover', () => {
-    buttonAll.style.boxShadow = '4px 4px 2px 2px #afe8ff'
-  })
+
+
+const windowsWidth = window.innerWidth;
+
+if(windowsWidth > 991){
+  const buttonHoverAminAll = document.querySelectorAll('.capab__wrapp > a, .bgbanner__wrapp > a, .footer__form-btn')
+  for(let buttonAll of buttonHoverAminAll){
+    buttonAll.addEventListener('mouseout', () => {
+      buttonAll.style.boxShadow = ''
+    })
+    buttonAll.addEventListener('mouseover', () => {
+      buttonAll.style.boxShadow = '4px 4px 2px 2px #afe8ff'
+    })
+  }
 }
+
